@@ -16,6 +16,7 @@
 
 import re
 import sys
+from config import *
 
 '''
 This file contains the global settings that don't usually need to be changed.
@@ -42,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
@@ -129,6 +131,9 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.google.GoogleOAuth2',
+    'social.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend',
     'wger.utils.helpers.EmailAuthBackend'
 )
@@ -149,6 +154,8 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
 
                 # Django mobile
                 'django_mobile.context_processors.flavour',

@@ -1,0 +1,16 @@
+[flake8]
+
+exclude = 
+	.git, 
+	__pycache__,
+	setup.py,
+	task.py,
+	manage.py,
+	docs/conf.py,
+	extras,
+	node_modules,
+	wger/settings.py,
+	wger/__main__.py
+	wger/settings_global.py
+	wger/wsgi.py,
+	wger/__init__.py

@@ -21,5 +21,6 @@ class ExerciseConfig(AppConfig):
     name = 'wger.exercises'
     verbose_name = "Exercise"
 
-    def ready(self):
-        import wger.exercises.signals
+    # uncomment to use method.
+    # def ready(self):
+    #     import wger.exercises.signals

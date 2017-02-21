@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with Workout Manager.  If not, see <http://www.gnu.org/licenses/>.
 
+# flake8 flagging import unused but some variables depend on it.
 from django.conf.urls import patterns, url, include
 
 from wger.config.views import language_config

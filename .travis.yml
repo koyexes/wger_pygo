@@ -66,5 +66,13 @@ script:
   # Code coverage
   - coverage report
 
+#integrate travis build with slack
 notifications:
   slack: andela:l6HtahN5TFwe7CaKTqxjFCrJ
+
+# After the build test with coveralls
+after_success:
+- coveralls
+
+
+
